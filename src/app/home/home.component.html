@@ -1,0 +1,31 @@
+<div class="container">
+  <h2>Formulario Compuesto</h2>
+
+  <!-- Contenedor para los formularios hijos -->
+  <div class="child-forms">
+    <div class="child-form">
+      <app-child [id]="'child1'"></app-child>
+    </div>
+
+    <div class="child-form">
+      <app-child [id]="'child2'"></app-child>
+    </div>
+
+    <div class="child-form">
+      <app-other-child></app-other-child>
+    </div>
+  </div>
+
+  <hr />
+
+  <label for="comment">Datos recopilados:</label>
+  <textarea
+    id="comment"
+    name="comment"
+    cols="100"
+    rows="10"
+    readonly
+  >
+    {{ formState | json }}
+  </textarea>
+</div>

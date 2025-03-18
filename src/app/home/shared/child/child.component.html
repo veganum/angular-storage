@@ -1,0 +1,24 @@
+<h3>Form Child: {{ id }}</h3>
+<form (ngSubmit)="actualizarFormulario()">
+  <label>Nombre:</label>
+  <input
+    type="text"
+    [(ngModel)]="formData.nombre"
+    name="nombre"
+    (ngModelChange)="actualizarFormulario()"
+    title="Ingrese su nombre"
+    placeholder="Nombre"
+  />
+
+  <label>Edad:</label>
+  <input
+    type="number"
+    [(ngModel)]="formData.edad"
+    name="edad"
+    (ngModelChange)="actualizarFormulario()"
+    title="Ingrese su edad"
+    placeholder="Edad"
+  />
+
+  <button type="submit">Actualizar</button>
+</form>

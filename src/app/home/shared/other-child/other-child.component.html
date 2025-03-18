@@ -1,0 +1,24 @@
+<h3>Form Other Child</h3>
+<form (ngSubmit)="actualizarFormulario()">
+  <label>Nombre:</label>
+  <input
+    type="text"
+    [(ngModel)]="formData.nombre"
+    name="nombre"
+    (ngModelChange)="actualizarFormulario()"
+    title="Enter your name"
+    placeholder="Enter your name"
+  />
+
+  <label>Edad:</label>
+  <input
+    type="number"
+    [(ngModel)]="formData.edad"
+    name="edad"
+    (ngModelChange)="actualizarFormulario()"
+    title="Enter your age"
+    placeholder="Enter your age"
+  />
+
+  <button type="submit">Actualizar</button>
+</form>
